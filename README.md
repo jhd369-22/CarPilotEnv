@@ -10,3 +10,5 @@ $$ actions = 0: Forward, 1: Left, 2: Right, 3: Brake $$
 The agent’s complete state at each time step is encoded as the 3-element tuple (x, y, Orientation). For example, the starting state S0 is encoded (0, 0, 2).
 
 The environment model is a 9-by-6 grid map, outside of the fixed grid map is considered as terminal “crash” state that reward a penalty of −5. Any other non-terminating action receives a penalty of −0.01. The discount factor is 1. Initially, the agent has no knowledge of the environment model. The agent can gradually learn the environment model based on its real experience over time.
+
+The program will print out state history of the car in the grid map for every 1000 episodes.
